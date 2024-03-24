@@ -165,7 +165,7 @@ img {
   max-height: 70px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 70px) {
   .nav__logo img {
     max-width: 10%;
   }
