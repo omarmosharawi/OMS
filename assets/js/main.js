@@ -67,3 +67,36 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+const phrases = ["Software Engineer", "Software Developer", "Creative Coder"];
+let currentPhrase = 0;
+let letterCount = 0;
+let currentText = '';
+let isDeleting = false;
+
+function type() {
+  const element = document.getElementById('typing');
+  const fullPhrase = phrases[currentPhrase];
+
+  if (isDeleting) {
+    currentText = fullPhrase.substring(0, letterCount - 1);
+    letterCount--;
+  } else {
+    currentText = fullPhrase.substring(0, letterCount + 1);
+    letterCount++;
+  }
+
+  element.innerHTML = currentText;
+
+  if (!isDeleting && currentText === fullPhrase) {
+    setTimeout(() => isDeleting = true, 1000);
+  } else if (isDeleting && currentText === '') {
+    isDeleting = false;
+    currentPhrase = (currentPhrase + 1) % phrases.length;
+  }
+
+  const typingSpeed = isDeleting ? 50 : 100;
+  setTimeout(type, typingSpeed);
+}
+
+type();
