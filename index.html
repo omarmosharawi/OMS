@@ -3,10 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="assets/css/styles.css">
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
         <title>omarmosharawi</title>
+
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+        <meta property="og:title" content="OMS - OmarMoSharawi">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://omarmosharawi.github.io/OMS/">
+        <meta property="og:image" content="https://omarmosharawi.github.io/OMS/assets/img/skills.jpg">
+        <meta property="og:image:type" content="image/jpg">
+        <meta property="og:image:width" content="1024">
+        <meta property="og:image:height" content="1024">
+        <meta property="og:description" content="Software Engineer Omar Mohamed Sharawi">
     </head>
     <body>
         <header class="l-header">
@@ -142,7 +154,7 @@
                     </div>
 
                     <div>
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                        <img src="assets/img/skills.jpg" alt="Omar Mohamed Sharawi" class="skills__img">
                     </div>
                 </div>
             </section>
@@ -151,11 +163,11 @@
                 <h2 class="section-title">Work</h2>
 
                 <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
+                    <a href="https://ebadelrahmanfactory.com/" class="work__img">
+                        <img src="assets/img/work1.png" alt="Ebad ElRahman Factory">
                     </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
+                    <a href="https://github.com/omarmosharawi/SimpleSA_PY" class="work__img">
+                        <img src="assets/img/work2.png" alt="">
                     </a>
                     <!-- <a href="" class="work__img">
                         <img src="assets/img/work3.jpg" alt="">
@@ -163,8 +175,8 @@
                     <!-- <a href="" class="work__img">
                         <img src="assets/img/work4.jpg" alt="">
                     </a> -->
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
+                    <a href="https://github.com/omarmosharawi/Taskaty.V1_PY" class="work__img">
+                        <img src="assets/img/work5.png" alt="">
                     </a>
                     <!-- <a href="" class="work__img">
                         <img src="assets/img/work6.jpg" alt="">
@@ -172,15 +184,25 @@
                 </div>
             </section>
 
-            <section class="contact section" id="contact">
+            <!-- <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
-
                 <div class="contact__container bd-grid">
                     <form action="" class="contact__form">
                         <input type="text" placeholder="Name" class="contact__input">
                         <input type="mail" placeholder="Email" class="contact__input">
                         <textarea name="msg-box" placeholder="Message" id="" cols="0" rows="10" class="contact__input"></textarea>
                         <input type="button" value="Send" class="contact__button button" id="sendBtn">
+                    </form>
+                </div>
+            </section> -->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form" id="contactForm">
+                        <input type="text" placeholder="Name" class="contact__input" id="nameInput">
+                        <input type="email" placeholder="Email" class="contact__input" id="emailInput">
+                        <textarea name="msg-box" placeholder="Message" cols="0" rows="10" class="contact__input" id="messageInput"></textarea>
+                        <input type="submit" value="Send" class="contact__button button" id="sendBtn">
                     </form>
                 </div>
             </section>

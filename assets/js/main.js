@@ -40,7 +40,7 @@ window.addEventListener('scroll', scrollActive)
 
 const sr = ScrollReveal({
     origin: 'top',
-    distance: '60px',
+    distance: '50px',
     duration: 2000,
     delay: 200,
 });
@@ -98,5 +98,61 @@ function type() {
   const typingSpeed = isDeleting ? 50 : 100;
   setTimeout(type, typingSpeed);
 }
-
 type();
+
+const form = document.getElementById('contactForm');
+const nameInput = document.getElementById('nameInput');
+const emailInput = document.getElementById('emailInput');
+const messageInput = document.getElementById('messageInput');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const messageError = document.getElementById('messageError');
+
+function showError(errorElement, message) {
+    errorElement.textContent = message;
+}
+
+function hideError(errorElement) {
+    errorElement.textContent = '';
+}
+
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isValidForm() {
+    return nameInput.value.trim() && isValidEmail(emailInput.value.trim()) && messageInput.value.trim();
+}
+
+function clearForm() {
+  nameInput.value = '';
+  emailInput.value = '';
+  messageInput.value = '';
+  hideError(nameError);
+  hideError(emailError);
+  hideError(messageError);
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  if (!nameInput.value.trim()) {
+      showError(nameError, 'Name is required');
+  } else {
+      hideError(nameError);
+  }
+  if (!isValidEmail(emailInput.value.trim())) {
+      showError(emailError, 'Invalid email address');
+  } else {
+      hideError(emailError);
+  }
+  if (!messageInput.value.trim()) {
+      showError(messageError, 'Message is required');
+  } else {
+      hideError(messageError);
+  }
+  if (isValidForm()) {
+      console.log('Form submitted successfully!');
+      clearForm();
+  }
+});
