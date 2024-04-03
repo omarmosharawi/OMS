@@ -641,6 +641,8 @@ img {
 
 .loader {
   position: fixed;
+  display: flex;
+  justify-content: center;
   top: 35%;
   left: 45%;
   transform: translate(-50%, -50%);
@@ -715,4 +717,8 @@ img {
     float: none;
     margin: 0 auto;
   }
+}
+
+.contact-info {
+  text-align: center;
 }
