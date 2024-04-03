@@ -156,3 +156,17 @@ form.addEventListener('submit', (e) => {
       clearForm();
   }
 });
+
+const loader = document.querySelector(".loader");
+
+window.addEventListener("load", () => {
+  loader.classList.add("hidden");
+});
+
+window.onload = function() {
+  document.getElementById('loading-screen').style.display = 'block';
+
+  setTimeout(() => {
+    document.getElementById('loading-screen').style.display = 'none';
+  }, 500);
+};
