@@ -18,5 +18,3 @@ Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact
 Omar Mohamed Hussien Ali - @omarmosharawi - omarmosharawi@gmail.com
-
-Project Link: https://github.com/omarmosharawi/OMS
